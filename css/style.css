@@ -1,0 +1,83 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  border-radius: 8px;
+  overflow: hidden;
+}
+@media(max-width:767px){
+  .container{
+    width: 90%;
+    margin: 25px auto;
+  }
+}
+.container .box{
+  padding: 50px 25px 50px 35px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.container .box svg{
+  margin-bottom: 30px;
+}
+.container .box h3{
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+  font-size: 30px;
+}
+.container .box p{
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  font-weight: 400;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 2;
+}
+.container .box a{
+  text-decoration: none;
+  display: block;
+  width: fit-content;
+  margin-left: 25px;
+  background-color: white;
+  padding: 15px 30px;
+  border-radius: 30px;
+  transition: 0.4s;
+  border: 1px solid white;
+  font-family: 'Lexend Deca', sans-serif;
+}
+.container .box.sedan{
+  background-color: hsl(31, 77%, 52%);
+}
+.container .box.sedan a{
+  color: hsl(31, 77%, 52%);
+}
+.container .box.suv{
+  background-color: hsl(184, 100%, 22%);
+}
+.container .box.suv a{
+  color: hsl(184, 100%, 22%);
+}
+.container .box.luxury{
+  background-color: hsl(179, 100%, 13%);
+}
+.container .box.luxury a{
+  color: hsl(179, 100%, 13%);
+}
+.container .box a:hover{
+  background-color: transparent;
+  color: hsla(0, 0%, 100%, 0.75);
+}
